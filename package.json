@@ -1,0 +1,31 @@
+{
+  "name": "PostCSSTest",
+  "version": "0.0.1",
+  "description": "",
+  "devDependencies": {
+    "autoprefixer": "^7.2.1",
+    "body-parser": "^1.18.2",
+    "cookie-parser": "^1.4.3",
+    "cssnext": "^1.8.4",
+    "del": "^3.0.0",
+    "ejs-mate": "^2.3.0",
+    "express": "^4.16.2",
+    "gulp": "^3.9.1",
+    "gulp-connect": "^5.0.0",
+    "gulp-express": "^0.3.5",
+    "gulp-postcss": "^7.0.0",
+    "gulp-watch": "^4.3.11",
+    "pixrem": "^4.0.1",
+    "postcss": "^6.0.14",
+    "postcss-advanced-variables": "^1.2.2",
+    "postcss-color-rgba-fallback": "^3.0.0",
+    "postcss-opacity": "^5.0.0",
+    "postcss-pseudoelements": "^5.0.0",
+    "postcss-vmin": "^3.0.0",
+    "postcss-will-change": "^2.0.0",
+    "precss": "^2.0.0",
+    "run-sequence": "^2.2.0",
+    "vinyl-named": "^1.1.0",
+    "webpack-stream": "^4.0.0"
+  }
+}

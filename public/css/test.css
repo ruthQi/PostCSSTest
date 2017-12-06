@@ -1,0 +1,71 @@
+/* .test{
+   background-color: red;
+} */
+/*autoprefixer*/
+.autoprefixer{
+   display: flex;
+   transform: translate3d(0,0,0);
+}
+
+/*cssnext*/
+
+.cssnext{
+   background: color(red alpha(-10%));
+}
+
+/*precss*/
+
+.precss{
+   @if 3 < 5{
+      background: green;
+   }
+   @else{
+      background: blue;
+   } 
+}
+
+/*===========================================*/
+/*autoprefixer*/
+@keyframes animationExample {
+   from { width: 0; }
+   to { width: 100%; }
+}
+.animateThis {
+   animation: animationExample 2s; 
+   display: flex; 
+}
+
+/*postcss-will-change*/
+.thisWillChange{
+   will-change: transform;
+}
+
+/*postcss-color-rgba-fallback对不支持rgba的浏览器添加降级处理*/
+.rgbaFallBack{
+   background: rgba(200,40,20,0.6);
+}
+
+/*postcss-opacity:为不支持opacity的浏览器添加滤镜属性*/
+.opacityFallBack{
+   opacity: 0.5;
+}
+
+/*postcss-pseudoelements:将伪元素的::转换为:;IE8中不支持伪元素，会转换为一个:*/
+.element::before{
+   content: '';
+}
+
+/*使用vm为vmin降级：IE9不支持vmin,postcss-vmin可以转化为vm*/
+.vmFallBack{
+   width: 50vmin;
+}
+
+/*为rem添加px做降级处理：IE8一直不支持rem,IE9和IE10不支持伪元素和font属性，pixrem可自动为rem添加px属性*/
+.remFallBack{
+   height: 2rem;
+   font: 2rem Arial;
+}
+.remFallBack::before{
+   content: '';
+   line-height: 1rem;
+}

@@ -1,0 +1,16 @@
+node_modules
+npm-debug.log
+.idea
+.DS_Store
+.babelrc
+.vscode
+.history
+build
+public/dist
+public/scss/includes/sprites/
+public/scripts/pages/common.js
+public/scripts/tpl2js
+views/release
+logs/
+public/**/*manifest.json
+rev-manifest.json
