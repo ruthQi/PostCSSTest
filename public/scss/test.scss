@@ -1,6 +1,3 @@
-/*postcss-import可以代替sass中的import*/
-@import './reset.css';
-
 /* .test{
    background-color: red;
 } */
@@ -17,6 +14,7 @@
 }
 
 /*precss*/
+
 .precss{
    @if 3 < 5{
       background: green;

@@ -2,6 +2,7 @@
 
 const gulp = require('gulp');
 const runSequence = require('run-sequence');
+//============postcss插件==============================
 const postcss = require('gulp-postcss');
 const autoprefixer = require('autoprefixer');
 const cssnext = require('cssnext');
@@ -12,22 +13,20 @@ const pseudoelements = require('postcss-pseudoelements');
 const vmin = require('postcss-vmin'); 
 const pixrem = require('pixrem'); 
 const will_change = require('postcss-will-change');
-
-
-var del = require('del');
-
-var watch = require('gulp-watch');
-var connect = require('gulp-connect');
-var webpack = require('webpack-stream');
-var named = require('vinyl-named');
-
-var server = require('gulp-express');
+//============postcss插件==============================
+const sass = require('gulp-sass');
+const del = require('del');
+const watch = require('gulp-watch');
+const connect = require('gulp-connect');
+const webpack = require('webpack-stream');
+const named = require('vinyl-named');
+const server = require('gulp-express');
 
 
 //此处需要执行npm install postcss-advanced-variables --save-dev，否则使用gulp css报错
 gulp.task('css', function(){
    //使用的插件
-   var processors = [
+   /*var processors = [
       autoprefixer,
       cssnext,
       precss
@@ -41,10 +40,11 @@ gulp.task('css', function(){
       pixrem,
       will_change,//autoprefixer应写在此属性之后，编译之后的属性还可以自动添加前缀
       autoprefixer
-   ]
+   ]*/
    //var processors = [precss];
-   return gulp.src('./public/css/**/*.css')
-            .pipe(postcss(processors1))
+   return gulp.src('./public/css/**/*.css')//gulp.src('./public/scss/**/*.scss')
+            ///.pipe(sass().on('error', sass.logError))
+            .pipe(postcss())
             .pipe(gulp.dest('./public/dist/styles/'));
 })
 gulp.task('webpack', function() {
@@ -82,7 +82,7 @@ gulp.task('dev', function (done) {
       'clean',
       'css',
       'webserver:dev',
-      //'webpack',
+      'webpack',
       'watch',
    done);
 });
