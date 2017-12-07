@@ -24,9 +24,11 @@ const server = require('gulp-express');
 
 
 //此处需要执行npm install postcss-advanced-variables --save-dev，否则使用gulp css报错
-/*1.gulp+css: 使用postcss,需要使用gulp-postcss;并且需要配置需要安装插件postcss(processors1)；
-  2. gulp+webpack+css: webpack.config.js设置postcss-loader属性，并引入postcss插件的配置文件；
-  3.gulp+webpack+sass: 引入gulp-sass然后pipe(sass().on('error', sass.logError))编译*/
+/*postcss与sass选择其一即可
+  1.gulp+css: 使用postcss,需要使用gulp-postcss;并且需要配置需要安装插件postcss(processors1)；
+  2. gulp+webpack+css: 在js中引入css时与webpack有关，webpack.config.js设置postcss-loader属性，并引入postcss插件的配置文件；
+    直接使用css时使用方法1即可
+  3.gulp+webpack+sass: 引入gulp-sass然后pipe(sass().on('error', sass.logError))编译；sass和postcss选择其一即可*/
 gulp.task('css', function(){
    //使用的插件
    /*var processors = [
