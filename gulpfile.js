@@ -47,6 +47,7 @@ gulp.task('css', function(){
       autoprefixer
    ]*/
    //var processors = [precss];
+   //使用postcss()时,会去寻找postcss.config.js文件，加载插件
    return gulp.src('./public/css/**/*.css')//gulp.src('./public/scss/**/*.scss')
             ///.pipe(sass().on('error', sass.logError))
             .pipe(postcss())
@@ -87,7 +88,7 @@ gulp.task('dev', function (done) {
       'clean',
       'css',
       'webserver:dev',
-      'webpack',
+      //'webpack',
       'watch',
    done);
 });
