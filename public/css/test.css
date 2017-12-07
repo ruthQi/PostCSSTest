@@ -71,3 +71,11 @@
    content: '';
    line-height: 1rem;
 }
+
+/*嵌套*/
+.testLink{
+   color: red;
+   &:hover{
+      color: green;
+   };
+}
